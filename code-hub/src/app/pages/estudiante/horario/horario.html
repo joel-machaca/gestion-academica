@@ -1,0 +1,478 @@
+<!-- Main Content Wrapper -->
+    <div class="flex-1 flex flex-col h-full relative overflow-hidden bg-[#fcfcfc]">
+        <!-- Top Header -->
+        <header class="h-16 border-b border-[#f4f0f1] bg-white px-6 flex items-center justify-between shrink-0 z-1">
+            <div class="flex items-center gap-2 md:hidden">
+                <button class="text-gray-500 hover:text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <h2 class="text-lg font-bold text-primary">Intranet</h2>
+            </div>
+            <div class="hidden md:flex flex-col">
+                <h2 class="text-xl font-bold text-text-dark">Mi Horario</h2>
+                <p class="text-xs text-gray-500">Ciclo 2023-II • Semana 4</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="relative p-2 text-gray-500 hover:text-primary transition-colors rounded-full hover:bg-gray-50">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="absolute top-2 right-2 size-2 bg-primary rounded-full border border-white"></span>
+                </button>
+                <div class="md:hidden bg-center bg-no-repeat bg-cover rounded-full size-8 border border-gray-200"
+                    data-alt="Small profile avatar for mobile"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAcLVAW4UtJvehmJ2ut2L0OG8lveloZl4f2WyywFnHI4GggR8yAN5--166dTKSiMAwngjqDJ0GmYwPlk41Bf-1Xb88SxNDiOPn1o10qP1f_2RwBnHvbd5GD6PIYecL8Qeqz2JntTwZBa8Y7OMk7dsj4rq6VklLD24ZAxivPvBQPMzxDCYttiBxgXTrOFe3UVq6HftJGqjJUsDcOm-DPcHwJ35xGYBj1MzWCAX6FjWaIavqKuZ7pGgF7fyXzJzLKxIJ1l8-k86VEpl4");'>
+                </div>
+            </div>
+        </header>
+        <!-- Scrollable Content Area -->
+        <main class="flex-1 overflow-y-auto p-4 md:p-8">
+            <div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-6 h-full">
+                <!-- Left Column: Main Calendar -->
+                <div
+                    class="flex-1 flex flex-col bg-white rounded-xl shadow-sm border border-[#e6dbdd] overflow-hidden min-h-[600px]">
+                    <!-- Calendar Toolbar -->
+                    <div
+                        class="p-4 border-b border-[#f4f0f1] flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-4">
+                            <button
+                                class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors shadow-sm">
+                                Hoy
+                            </button>
+                            <div class="flex items-center bg-gray-50 rounded-lg p-0.5 border border-[#e6dbdd]">
+                                <button
+                                    class="p-1.5 hover:bg-white hover:shadow-sm rounded-md text-gray-600 transition-all">
+                                    <span class="material-symbols-outlined text-lg">chevron_left</span>
+                                </button>
+                                <button
+                                    class="p-1.5 hover:bg-white hover:shadow-sm rounded-md text-gray-600 transition-all">
+                                    <span class="material-symbols-outlined text-lg">chevron_right</span>
+                                </button>
+                            </div>
+                            <h3 class="text-lg font-bold text-text-dark capitalize">Agosto 2023</h3>
+                        </div>
+                        <div class="flex bg-gray-50 p-1 rounded-lg border border-[#e6dbdd]">
+                            <button
+                                class="px-3 py-1.5 bg-white text-primary text-sm font-medium rounded shadow-sm">Mes</button>
+                            <button
+                                class="px-3 py-1.5 text-gray-600 text-sm font-medium hover:text-primary transition-colors">Semana</button>
+                            <button
+                                class="px-3 py-1.5 text-gray-600 text-sm font-medium hover:text-primary transition-colors">Día</button>
+                        </div>
+                    </div>
+                    <!-- Calendar Grid -->
+                    <div class="flex-1 flex flex-col overflow-auto">
+                        <!-- Days Header -->
+                        <div class="grid grid-cols-7 border-b border-[#e6dbdd] bg-gray-50">
+                            <div class="py-3 text-center text-sm font-bold text-gray-500 uppercase tracking-wide">Dom
+                            </div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-500 uppercase tracking-wide">Lun
+                            </div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-500 uppercase tracking-wide">Mar
+                            </div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-500 uppercase tracking-wide">Mié
+                            </div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-500 uppercase tracking-wide">Jue
+                            </div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-500 uppercase tracking-wide">Vie
+                            </div>
+                            <div class="py-3 text-center text-sm font-bold text-gray-500 uppercase tracking-wide">Sáb
+                            </div>
+                        </div>
+                        <!-- Days Grid -->
+                        <div class="flex-1 grid grid-cols-7 grid-rows-5 bg-[#e6dbdd] gap-px">
+                            <!-- Previous Month Days -->
+                            <div class="bg-white min-h-[120px] p-2 bg-gray-50/30">
+                                <span class="text-gray-300 font-medium text-sm">30</span>
+                            </div>
+                            <div class="bg-white min-h-[120px] p-2 bg-gray-50/30">
+                                <span class="text-gray-300 font-medium text-sm">31</span>
+                            </div>
+                            <!-- Current Month Days -->
+                            <!-- Day 1 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">1</span>
+                            </div>
+                            <!-- Day 2 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">2</span>
+                                <div
+                                    class="bg-red-50 border-l-[3px] border-primary p-1.5 rounded-r cursor-pointer hover:bg-red-100 transition-colors group">
+                                    <p class="text-xs font-bold text-primary group-hover:text-primary-dark">08:00 -
+                                        10:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Matemática Apl.</p>
+                                </div>
+                            </div>
+                            <!-- Day 3 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">3</span>
+                            </div>
+                            <!-- Day 4 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">4</span>
+                                <div
+                                    class="bg-blue-50 border-l-[3px] border-blue-500 p-1.5 rounded-r cursor-pointer hover:bg-blue-100 transition-colors group">
+                                    <p class="text-xs font-bold text-blue-700">14:00 - 16:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Programación Web</p>
+                                </div>
+                            </div>
+                            <!-- Day 5 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">5</span>
+                            </div>
+                            <!-- Day 6 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">6</span>
+                            </div>
+                            <!-- Week 2 -->
+                            <!-- Day 7 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">7</span>
+                            </div>
+                            <!-- Day 8 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">8</span>
+                                <div
+                                    class="bg-primary text-white p-1.5 rounded shadow-sm cursor-pointer hover:bg-primary-dark transition-colors">
+                                    <div class="flex items-center gap-1 mb-0.5">
+                                        <span class="material-symbols-outlined text-[10px]">warning</span>
+                                        <p class="text-[10px] font-bold uppercase tracking-wider">Examen Parcial</p>
+                                    </div>
+                                    <p class="text-xs font-medium truncate">Base de Datos</p>
+                                </div>
+                            </div>
+                            <!-- Day 9 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">9</span>
+                                <div
+                                    class="bg-red-50 border-l-[3px] border-primary p-1.5 rounded-r cursor-pointer hover:bg-red-100 transition-colors group">
+                                    <p class="text-xs font-bold text-primary">08:00 - 10:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Matemática Apl.</p>
+                                </div>
+                            </div>
+                            <!-- Day 10 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">10</span>
+                                <div
+                                    class="bg-purple-50 border-l-[3px] border-purple-500 p-1.5 rounded-r cursor-pointer hover:bg-purple-100 transition-colors group">
+                                    <p class="text-xs font-bold text-purple-700">10:00 - 12:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Inglés III</p>
+                                </div>
+                            </div>
+                            <!-- Day 11 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">11</span>
+                                <div
+                                    class="bg-blue-50 border-l-[3px] border-blue-500 p-1.5 rounded-r cursor-pointer hover:bg-blue-100 transition-colors group">
+                                    <p class="text-xs font-bold text-blue-700">14:00 - 16:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Programación Web</p>
+                                </div>
+                            </div>
+                            <!-- Day 12 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">12</span>
+                            </div>
+                            <!-- Day 13 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">13</span>
+                            </div>
+                            <!-- Week 3 -->
+                            <!-- Day 14 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50 relative bg-red-50/20">
+                                <div
+                                    class="ml-auto flex items-center justify-center size-7 rounded-full bg-primary text-white text-sm font-bold shadow-md">
+                                    14</div>
+                                <div
+                                    class="bg-green-50 border-l-[3px] border-green-500 p-1.5 rounded-r cursor-pointer hover:bg-green-100 transition-colors group animate-pulse">
+                                    <p class="text-xs font-bold text-green-700">08:00 - 10:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Laboratorio Física</p>
+                                </div>
+                            </div>
+                            <!-- Day 15 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">15</span>
+                            </div>
+                            <!-- Day 16 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">16</span>
+                                <div
+                                    class="bg-red-50 border-l-[3px] border-primary p-1.5 rounded-r cursor-pointer hover:bg-red-100 transition-colors group">
+                                    <p class="text-xs font-bold text-primary">08:00 - 10:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Matemática Apl.</p>
+                                </div>
+                            </div>
+                            <!-- Day 17 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">17</span>
+                                <div
+                                    class="bg-purple-50 border-l-[3px] border-purple-500 p-1.5 rounded-r cursor-pointer hover:bg-purple-100 transition-colors group">
+                                    <p class="text-xs font-bold text-purple-700">10:00 - 12:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Inglés III</p>
+                                </div>
+                            </div>
+                            <!-- Day 18 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">18</span>
+                                <div
+                                    class="bg-blue-50 border-l-[3px] border-blue-500 p-1.5 rounded-r cursor-pointer hover:bg-blue-100 transition-colors group">
+                                    <p class="text-xs font-bold text-blue-700">14:00 - 16:00</p>
+                                    <p class="text-xs text-gray-700 truncate">Programación Web</p>
+                                </div>
+                            </div>
+                            <!-- Day 19 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">19</span>
+                            </div>
+                            <!-- Day 20 -->
+                            <div
+                                class="bg-white min-h-[120px] p-2 flex flex-col gap-1 transition-colors hover:bg-gray-50">
+                                <span class="text-text-dark font-medium text-sm ml-auto">20</span>
+                            </div>
+                            <!-- Filling remaining days empty for brevity in mock -->
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">21</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">22</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">23</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">24</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">25</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">26</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">27</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">28</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">29</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">30</span></div>
+                            <div class="bg-white min-h-[120px] p-2"><span
+                                    class="text-text-dark font-medium text-sm ml-auto block text-right">31</span></div>
+                            <div class="bg-white min-h-[120px] p-2 bg-gray-50/30"><span
+                                    class="text-gray-300 font-medium text-sm ml-auto block text-right">1</span></div>
+                            <div class="bg-white min-h-[120px] p-2 bg-gray-50/30"><span
+                                    class="text-gray-300 font-medium text-sm ml-auto block text-right">2</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Sidebar Widgets -->
+                <div class="w-full lg:w-80 flex flex-col gap-6 shrink-0">
+                    <!-- Mini Calendar Widget -->
+                    <div class="bg-white rounded-xl shadow-sm border border-[#e6dbdd] p-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-text-dark">Agosto 2023</h4>
+                            <div class="flex gap-1">
+                                <button
+                                    class="size-6 flex items-center justify-center text-gray-500 hover:text-primary"><span
+                                        class="material-symbols-outlined text-lg">chevron_left</span></button>
+                                <button
+                                    class="size-6 flex items-center justify-center text-gray-500 hover:text-primary"><span
+                                        class="material-symbols-outlined text-lg">chevron_right</span></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-7 text-center text-xs mb-2 text-gray-400 font-medium">
+                            <div>D</div>
+                            <div>L</div>
+                            <div>M</div>
+                            <div>M</div>
+                            <div>J</div>
+                            <div>V</div>
+                            <div>S</div>
+                        </div>
+                        <div class="grid grid-cols-7 text-center text-sm gap-y-2">
+                            <div class="text-gray-300">30</div>
+                            <div class="text-gray-300">31</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                1</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                2</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                3</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                4</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                5</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                6</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                7</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                8</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                9</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                10</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                11</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                12</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                13</div>
+                            <div
+                                class="bg-primary text-white rounded-full size-8 flex items-center justify-center font-bold shadow-md cursor-pointer">
+                                14</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                15</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                16</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                17</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                18</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                19</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                20</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                21</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                22</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                23</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                24</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                25</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                26</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                27</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                28</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                29</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                30</div>
+                            <div
+                                class="hover:bg-gray-100 rounded-full size-8 flex items-center justify-center cursor-pointer">
+                                31</div>
+                        </div>
+                    </div>
+                    <!-- Filters / Legend -->
+                    <div class="bg-white rounded-xl shadow-sm border border-[#e6dbdd] p-4 flex flex-col gap-4"
+                        style="--checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');">
+                        <h4 class="font-bold text-text-dark border-b border-[#f4f0f1] pb-2">Mis Cursos</h4>
+                        <div class="flex flex-col gap-1">
+                            <label
+                                class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors">
+                                <input checked=""
+                                    class="h-4 w-4 rounded border-[#e6dbdd] text-primary focus:ring-0 cursor-pointer checked:bg-[image:--checkbox-tick-svg]"
+                                    type="checkbox" />
+                                <span class="flex-1 text-sm text-[#181112]">Matemática Aplicada</span>
+                                <span class="size-2 rounded-full bg-red-500"></span>
+                            </label>
+                            <label
+                                class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors">
+                                <input checked=""
+                                    class="h-4 w-4 rounded border-[#e6dbdd] text-primary focus:ring-0 cursor-pointer checked:bg-[image:--checkbox-tick-svg]"
+                                    type="checkbox" />
+                                <span class="flex-1 text-sm text-[#181112]">Programación Web</span>
+                                <span class="size-2 rounded-full bg-blue-500"></span>
+                            </label>
+                            <label
+                                class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors">
+                                <input checked=""
+                                    class="h-4 w-4 rounded border-[#e6dbdd] text-primary focus:ring-0 cursor-pointer checked:bg-[image:--checkbox-tick-svg]"
+                                    type="checkbox" />
+                                <span class="flex-1 text-sm text-[#181112]">Base de Datos</span>
+                                <span class="size-2 rounded-full bg-orange-500"></span>
+                            </label>
+                            <label
+                                class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors">
+                                <input checked=""
+                                    class="h-4 w-4 rounded border-[#e6dbdd] text-primary focus:ring-0 cursor-pointer checked:bg-[image:--checkbox-tick-svg]"
+                                    type="checkbox" />
+                                <span class="flex-1 text-sm text-[#181112]">Inglés III</span>
+                                <span class="size-2 rounded-full bg-purple-500"></span>
+                            </label>
+                            <label
+                                class="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors">
+                                <input checked=""
+                                    class="h-4 w-4 rounded border-[#e6dbdd] text-primary focus:ring-0 cursor-pointer checked:bg-[image:--checkbox-tick-svg]"
+                                    type="checkbox" />
+                                <span class="flex-1 text-sm text-[#181112]">Laboratorio Física</span>
+                                <span class="size-2 rounded-full bg-green-500"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Upcoming Events / Deadlines -->
+                    <div class="bg-white rounded-xl shadow-sm border border-[#e6dbdd] p-4 flex flex-col gap-4">
+                        <div class="flex items-center gap-2 border-b border-[#f4f0f1] pb-2">
+                            <span class="material-symbols-outlined text-primary">event_available</span>
+                            <h4 class="font-bold text-text-dark">Próximas Entregas</h4>
+                        </div>
+                        <div class="flex gap-3 items-start">
+                            <div class="flex flex-col items-center min-w-10">
+                                <span class="text-xs font-bold text-gray-500 uppercase">VIE</span>
+                                <span class="text-lg font-bold text-text-dark">18</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-text-dark leading-tight mb-1">Proyecto Final</p>
+                                <p class="text-xs text-gray-500">Programación Web • 23:59</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-start">
+                            <div class="flex flex-col items-center min-w-10">
+                                <span class="text-xs font-bold text-gray-500 uppercase">LUN</span>
+                                <span class="text-lg font-bold text-text-dark">21</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-text-dark leading-tight mb-1">Quiz Unidad 3</p>
+                                <p class="text-xs text-gray-500">Inglés III • 10:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>

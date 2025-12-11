@@ -1,0 +1,310 @@
+<div class="flex flex-1 overflow-hidden">
+    <!-- Left Sidebar: Modules & Navigation -->
+    <aside
+        class="w-full md:w-[320px] lg:w-[380px] flex-none flex-col bg-white border-r border-gray-400  z-10 hidden md:flex">
+        <div class="p-5 border-b border-gray-400/50">
+            <div class="flex items-center gap-2 text-sm text-[#896168] mb-3">
+                <a class="hover:text-red-700 flex items-center gap-1" href="#"><span
+                        class="material-symbols-outlined text-[16px]">arrow_back</span> Volver a Cursos</a>
+            </div>
+            <h3 class="text-lg font-bold text-text-neutral-900 dark:text-white leading-tight mb-2">Matemáticas I:
+                Fundamentos</h3>
+            <div class="flex flex-col gap-2">
+                <div class="flex justify-between text-xs font-medium text-[#896168]">
+                    <span>Progreso del curso</span>
+                    <span>45%</span>
+                </div>
+                <div class="h-1.5 w-full bg-[#f0eaea] rounded-full overflow-hidden ">
+                    <div class="h-full bg-red-700 rounded-full" style="width: 45%"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Module List -->
+        <div class="flex-1 overflow-y-auto scrollbar-thin p-4 space-y-4">
+            <!-- Module 1: Completed -->
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between px-2 py-1 cursor-pointer group">
+                    <h4 class="font-bold text-sm text-[#181112] dark:text-gray-200">Módulo 1: Introducción</h4>
+                    <span class="material-symbols-outlined text-[#896168]">expand_less</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <!-- Lesson Item: Completed -->
+                    <button
+                        class="flex items-center gap-3 p-3 rounded-lg w-full text-left hover:bg-gray-50 dark:hover:bg-white/5 group transition-colors">
+                        <span class="material-symbols-outlined text-green-600 text-[20px] shrink-0">check_circle</span>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-medium text-gray-500 line-through dark:text-gray-400">1.1
+                                Bienvenida al curso</span>
+                            <span class="text-xs text-gray-400">5 min • Video</span>
+                        </div>
+                    </button>
+                    <!-- Lesson Item: Completed -->
+                    <button
+                        class="flex items-center gap-3 p-3 rounded-lg w-full text-left hover:bg-gray-50 dark:hover:bg-white/5 group transition-colors">
+                        <span class="material-symbols-outlined text-green-600 text-[20px] shrink-0">check_circle</span>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-medium text-gray-500 line-through dark:text-gray-400">1.2
+                                Conceptos Básicos</span>
+                            <span class="text-xs text-gray-400">12 min • Lectura</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- Module 2: Active -->
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between px-2 py-1 cursor-pointer">
+                    <h4 class="font-bold text-sm text-text-neutral-900 dark:text-white">Módulo 2: Ecuaciones Lineales
+                    </h4>
+                    <span class="material-symbols-outlined text-text-neutral-900 dark:text-white">expand_more</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <!-- Lesson Item: Completed -->
+                    <button
+                        class="flex items-center gap-3 p-3 rounded-lg w-full text-left hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                        <span class="material-symbols-outlined text-green-600 text-[20px] shrink-0">check_circle</span>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-medium text-gray-500 dark:text-gray-400">2.1 Variables y
+                                Constantes</span>
+                            <span class="text-xs text-gray-400">8 min • Video</span>
+                        </div>
+                    </button>
+                    <!-- Lesson Item: ACTIVE -->
+                    <button
+                        class="flex items-center gap-3 p-3 rounded-lg w-full text-left bg-red-700/10 border-l-4 border-red-700 dark:bg-red-700/20">
+                        <span
+                            class="material-symbols-outlined text-red-700 text-[20px] shrink-0 animate-pulse">play_circle</span>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-bold text-red-700 dark:text-red-400">2.2 Resolución de
+                                variables</span>
+                            <span class="text-xs text-red-700/70 dark:text-red-300">15 min • Video Interactivo</span>
+                        </div>
+                    </button>
+                    <!-- Lesson Item: Locked -->
+                    <button
+                        class="flex items-center gap-3 p-3 rounded-lg w-full text-left opacity-60 cursor-not-allowed">
+                        <span class="material-symbols-outlined text-gray-400 text-[20px] shrink-0">lock</span>
+                        <div class="flex flex-col">
+                            <span class="text-sm font-medium text-text-neutral-900 dark:text-gray-300">2.3 Ejercicios
+                                Prácticos</span>
+                            <span class="text-xs text-gray-500">20 min • Quiz</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- Module 3: Locked -->
+            <div class="flex flex-col gap-2 opacity-50">
+                <div class="flex items-center justify-between px-2 py-1 cursor-pointer">
+                    <h4 class="font-bold text-sm text-text-neutral-900 dark:text-white">Módulo 3: Graficando Funciones
+                    </h4>
+                    <span class="material-symbols-outlined text-text-neutral-900 dark:text-white">expand_more</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col h-full overflow-y-auto bg-white dark:bg-neutral-900 relative">
+        <!-- Breadcrumbs (Mobile only, since sidebar has context on desktop) -->
+        <div class="md:hidden px-4 py-3 bg-white dark:bg-[#1a0d0e] border-b border-gray-400 flex items-center gap-2">
+            <button class="text-text-neutral-900 dark:text-white">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <span class="text-sm font-medium text-text-neutral-900 dark:text-white truncate">2.2 Resolución de
+                variables</span>
+        </div>
+        <!-- Content Container -->
+        <div class="w-full max-w-5xl mx-auto p-4 md:p-8 lg:p-10 pb-24">
+            <!-- Breadcrumbs Desktop -->
+            <div class="hidden md:flex items-center gap-2 mb-6 text-sm">
+                <a class="text-[#896168] hover:text-red-700" href="#">Módulo 2</a>
+                <span class="material-symbols-outlined text-[16px] text-[#C4C4C4]">chevron_right</span>
+                <span class="text-text-neutral-900 font-medium dark:text-white">2.2 Resolución de variables</span>
+            </div>
+            <!-- Video Player Section -->
+            <div
+                class="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-lg relative group mb-8 border border-gray-400 dark:border-gray-800">
+                <!-- Video Thumbnail/Placeholder -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                    data-alt="Blackboard with complex algebra equations written in white chalk"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCv0e4a8qSCKkSFez_0n6wdnaENN0hJRw_N8vrUKJvVn8dNVeWGTtRstnpWE1CAUfGf9_Y5IToNDiy2KphztGYZlcbz-cyvg5e7Kr-I-0bk2BastwkNLcGqigMBTeLWUvSUEiNtXyVbeqJ8CS8CrO0_MwI5GfJggA76Qd_oLHIefrpgQvT8P3y7sEPVofseD3-VcF7XeR9gJRT5_NU7Vgsirr6q0lC2PYBugJUEDytPs21ruzHKIUrXXyGYLI9H22ZmB5NMO5rb8RhC");'>
+                </div>
+                <!-- Play Button Overlay -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button
+                        class="size-20 bg-red-700/90 hover:bg-red-700 text-white rounded-full flex items-center justify-center shadow-xl transform transition hover:scale-105 backdrop-blur-sm">
+                        <span class="material-symbols-outlined text-5xl ml-1">play_arrow</span>
+                    </button>
+                </div>
+                <!-- Video Controls Bar (Static Mockup) -->
+                <div
+                    class="absolute bottom-0 left-0 right-0 h-14 bg-linear-to-t from-black/80 to-transparent px-4 flex items-center justify-between text-white">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined cursor-pointer">play_arrow</span>
+                        <span class="material-symbols-outlined cursor-pointer">volume_up</span>
+                        <span class="text-xs font-mono">04:23 / 15:00</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined cursor-pointer">closed_caption</span>
+                        <span class="material-symbols-outlined cursor-pointer">settings</span>
+                        <span class="material-symbols-outlined cursor-pointer">fullscreen</span>
+                    </div>
+                </div>
+                <!-- Progress Bar (Video) -->
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-white/20 cursor-pointer">
+                    <div class="h-full bg-red-700 w-[30%] relative">
+                        <div
+                            class="absolute right-0 top-1/2 -translate-y-1/2 size-3 bg-red-700 rounded-full shadow border-2 border-white transform scale-0 group-hover:scale-100 transition-transform">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Lesson Content Header -->
+            <div
+                class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8 border-b border-gray-400 pb-8">
+                <div class="flex-1">
+                    <h1 class="text-2xl md:text-3xl font-bold text-text-neutral-900 dark:text-white mb-3">Resolución de
+                        variables en ecuaciones lineales</h1>
+                    <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
+                        En esta lección, aprenderemos los pasos fundamentales para aislar una variable desconocida.
+                        Cubriremos las reglas de suma y resta, así como la multiplicación inversa.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 min-w-[200px]">
+                    <button
+                        class="flex items-center justify-center gap-2 px-5 py-2.5 bg-red-700 hover:bg-red-700-dark text-white rounded-lg font-medium shadow-sm transition-colors w-full">
+                        <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                        Marcar como visto
+                    </button>
+                    <button
+                        class="flex items-center justify-center gap-2 px-5 py-2.5 bg-white border border-gray-400 hover:bg-gray-50 text-text-neutral-900 rounded-lg font-medium transition-colors w-full dark:bg-transparent dark:text-white dark:hover:bg-white/10 dark:border-gray-600">
+                        <span class="material-symbols-outlined text-[20px]">download</span>
+                        Material de apoyo
+                    </button>
+                </div>
+            </div>
+            <!-- Additional Resources / Tabs -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 space-y-6">
+                    <section>
+                        <h3 class="text-lg font-bold text-text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-red-700">description</span>
+                            Resumen de la clase
+                        </h3>
+                        <div
+                            class="bg-white dark:bg-[#1e1e1e] p-6 rounded-xl border border-gray-400 dark:border-gray-700 shadow-sm">
+                            <p class="mb-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                                Para resolver una ecuación para <code
+                                    class="bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-red-700 font-mono font-bold">x</code>,
+                                necesitamos realizar operaciones inversas en ambos lados de la ecuación hasta que la
+                                variable quede sola. Recuerda: lo que haces en un lado, debes hacerlo en el otro.
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                                <li>Identificar la variable a despejar.</li>
+                                <li>Eliminar términos sumados o restados.</li>
+                                <li>Eliminar coeficientes multiplicados o divididos.</li>
+                                <li>Verificar la solución sustituyendo en la ecuación original.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h3 class="text-lg font-bold text-text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-red-700">forum</span>
+                            Preguntas Frecuentes
+                        </h3>
+                        <div class="space-y-3">
+                            <details
+                                class="group bg-white dark:bg-[#1e1e1e] border border-gray-400 dark:border-gray-700 rounded-lg open:ring-1 open:ring-red-700/20">
+                                <summary
+                                    class="flex justify-between items-center font-medium cursor-pointer list-none p-4 text-text-neutral-900 dark:text-white">
+                                    <span>¿Qué pasa si la variable es negativa?</span>
+                                    <span
+                                        class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+                                </summary>
+                                <div class="text-gray-600 dark:text-gray-300 mt-0 px-4 pb-4 leading-relaxed text-sm">
+                                    Si la variable final es negativa (ej. -x = 5), simplemente multiplica o divide ambos
+                                    lados por -1 para obtener la solución positiva (x = -5).
+                                </div>
+                            </details>
+                            <details
+                                class="group bg-white dark:bg-[#1e1e1e] border border-gray-400 dark:border-gray-700 rounded-lg">
+                                <summary
+                                    class="flex justify-between items-center font-medium cursor-pointer list-none p-4 text-text-neutral-900 dark:text-white">
+                                    <span>¿Cómo sé si mi respuesta es correcta?</span>
+                                    <span
+                                        class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+                                </summary>
+                                <div class="text-gray-600 dark:text-gray-300 mt-0 px-4 pb-4 leading-relaxed text-sm">
+                                    Sustituye el valor que encontraste para la variable en la ecuación original. Si
+                                    ambos lados de la igualdad dan el mismo número, tu respuesta es correcta.
+                                </div>
+                            </details>
+                        </div>
+                    </section>
+                </div>
+                <!-- Right Column (Within Content Area) - Quick Links -->
+                <div class="flex flex-col gap-6">
+                    <div class="bg-[#FDF2F4] dark:bg-red-700/5 rounded-xl p-5 border border-red-700/10">
+                        <h4 class="font-bold text-red-700 dark:text-red-400 mb-3 text-sm uppercase tracking-wider">
+                            Recursos Descargables</h4>
+                        <ul class="space-y-3">
+                            <li>
+                                <a class="flex items-center gap-3 group" href="#">
+                                    <div
+                                        class="size-8 rounded bg-white dark:bg-gray-800 flex items-center justify-center text-red-700 shadow-sm group-hover:scale-110 transition-transform">
+                                        <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                                    </div>
+                                    <span
+                                        class="text-sm font-medium text-text-neutral-900 dark:text-gray-200 group-hover:text-red-700 transition-colors">Guía
+                                        de Ejercicios.pdf</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flex items-center gap-3 group" href="#">
+                                    <div
+                                        class="size-8 rounded bg-white dark:bg-gray-800 flex items-center justify-center text-red-700 shadow-sm group-hover:scale-110 transition-transform">
+                                        <span class="material-symbols-outlined text-[18px]">table_view</span>
+                                    </div>
+                                    <span
+                                        class="text-sm font-medium text-text-neutral-900 dark:text-gray-200 group-hover:text-red-700 transition-colors">Hoja
+                                        de Trabajo.xlsx</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-[#1e1e1e] rounded-xl p-5 border border-gray-400 dark:border-gray-700">
+                        <h4 class="font-bold text-text-neutral-900 dark:text-white mb-2 text-sm">Instructor</h4>
+                        <div class="flex items-center gap-3 mt-3">
+                            <div class="size-10 rounded-full bg-cover bg-center"
+                                data-alt="Portrait of math instructor Prof. Elena Sanchez"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA96dSr16lAloQsJmX0MwATcYCW3wAC5XYqLxSPryh8p3xm4MggZrcTjmQ6G9p2oJk5lYdJ10nnaQ8GRSGjsU6oPnZuNohVjMRLZSP5_WTBGbKpT3190iEuho5VrcmZl06JWiw-4Qc-PC9a6FWuYnWnHSqJofkXTLdQ7RBDcGFMHCIS-z2W3jUf7kxtxrniC4kgPzdk5CfznFO1KvtlqsFbz406yKC5HFsa-gDLuO2nCE0gd6NL4Dq5ys6ojBAgT2-fvT3TF7cnv8mx");'>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-text-neutral-900 dark:text-white">Prof. Elena Sanchez
+                                </p>
+                                <p class="text-xs text-gray-500">Dpto. de Matemáticas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Navigation -->
+            <div class="mt-12 flex items-center justify-between border-t border-gray-400 pt-6">
+                <button
+                    class="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-red-700 hover:bg-gray-50 rounded-lg transition-colors dark:text-gray-400 dark:hover:bg-white/5">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    <div class="text-left hidden sm:block">
+                        <span class="block text-xs text-gray-400">Lección Anterior</span>
+                        <span class="block text-sm font-medium">2.1 Variables y Constantes</span>
+                    </div>
+                </button>
+                <button
+                    class="flex items-center gap-2 px-6 py-3 bg-red-700 hover:bg-red-700-dark text-white rounded-lg shadow-md hover:shadow-lg transition-all">
+                    <div class="text-right hidden sm:block">
+                        <span class="block text-xs text-red-100 opacity-80">Siguiente Lección</span>
+                        <span class="block text-sm font-medium">2.3 Ejercicios Prácticos</span>
+                    </div>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+    </main>

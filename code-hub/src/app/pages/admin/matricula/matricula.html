@@ -23,8 +23,8 @@
             <td class="px-6 py-4 text-sm text-gray-900 dark:text-white">{{ getNombreAlumno(m.usuarioId) }}</td>
             <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">{{ getNombreCurso(m.cursoId) }}</td>
             <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">
-              <button (click)="eliminarMatricula(m.id!)" class="text-red-600 hover:text-red-800">
-                Eliminar
+              <button (click)="eliminarMatricula(m.id!)" class="text-red-600 hover:text-white hover:bg-red-700/20 rounded-full w-10 h-10 cursor-pointer">
+                <span class="material-symbols-outlined text-xl!">delete</span>
               </button>
             </td>
           </tr>

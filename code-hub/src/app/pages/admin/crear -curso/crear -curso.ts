@@ -27,6 +27,17 @@ export class CrearCurso {
   previewImagen: string | ArrayBuffer | null = null;
   imagenSeleccionada: string = '';
 
+  imagenesCursos: string[] = [
+  'cursos/curso1.webp',
+  'cursos/curso2.webp',
+  'cursos/curso3.webp',
+  'cursos/curso4.webp'
+];
+getImagenRandom(): string {
+  const index = Math.floor(Math.random() * this.imagenesCursos.length);
+  return this.imagenesCursos[index];
+}
+
   horariosDisponibles: HorarioOption[] = [
     { id: 1, label: 'Lunes 08:00-10:00', dia: 'Lunes', horaInicio: '08:00', horaFin: '10:00' },
     { id: 2, label: 'Miércoles 08:00-10:00', dia: 'Miércoles', horaInicio: '08:00', horaFin: '10:00' },
@@ -97,7 +108,7 @@ export class CrearCurso {
       descripcion: formValue.descripcion,
       fechaInicio: formValue.fechaInicio,
       profesorId: formValue.profesorId,
-      imagen: formValue.imagen,
+      imagen: this.getImagenRandom(),
       estado: formValue.estado,
       horarios: horariosArray
     };

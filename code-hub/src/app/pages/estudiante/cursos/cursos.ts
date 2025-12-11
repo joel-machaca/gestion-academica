@@ -3,10 +3,11 @@ import { CursosService } from '../../../core/services/CursosService';
 import { MatriculasService } from '../../../core/services/MatriculasService';
 import { CommonModule } from '@angular/common';
 import { UsuarioService } from '../../../core/services/usuarioService';
+import { RouterLink, RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-cursos',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './cursos.html',
   styleUrl: './cursos.css',
 })

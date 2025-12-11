@@ -4,10 +4,11 @@ import { CursosService } from '../../../../core/services/CursosService';
 import { CommonModule } from '@angular/common';
 import { MatriculaModel } from '../../../../core/models/MatriculaModel';
 import { MatriculasService } from '../../../../core/services/MatriculasService';
+import { RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-gestion-curso',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './gestion-curso.html',
   styleUrl: './gestion-curso.css',
 })
