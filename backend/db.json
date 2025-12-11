@@ -1,0 +1,418 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "nombre": "admin"
+    },
+    {
+      "id": 2,
+      "nombre": "profesor"
+    },
+    {
+      "id": 3,
+      "nombre": "estudiante"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@idat.com",
+      "password": "$2a$10$.hPBB3wCUX0/7AFEuMs/nuKnVo2sI.IqRcxoBUND1qvI/lwwHpryO",
+      "nombre": "Juanito Campos Arguedas",
+      "roleId": 1,
+      "estado": "activo",
+      "imagen": "./profiles/profile-1.svg",
+      "id": 1
+    },
+    {
+      "email": "profe1@idat.com",
+      "password": "$2a$10$mNDWicc/uAuHYfwuGsymXOmtX1N55wikhiB2lv9h2ryf0j4Sb2qZ.",
+      "nombre": "Ricardo Mendoza",
+      "roleId": 2,
+      "estado": "activo",
+      "imagen": "./profiles/profile-2.svg",
+      "id": 2
+    },
+    {
+      "email": "profe2@idat.com",
+      "password": "$2a$10$dqQWnIfbZ3hMhLHPKoYGduhv0.sAcGN0fT6grUcKVzBPRij60vp3i",
+      "nombre": "María Torres",
+      "roleId": 2,
+      "estado": "activo",
+      "imagen": "./profiles/profile-1.svg",
+      "id": 3
+    },
+    {
+      "email": "profe3@idat.com",
+      "password": "$2a$10$fKUnCq6qxS19S91xmRrJJ./tuFe1qj7zak5cNq/QsQwoPmrmEfz/a",
+      "nombre": "Juan Ríos",
+      "roleId": 2,
+      "estado": "activo",
+      "imagen": "./profiles/profile-2.svg",
+      "id": 4
+    },
+    {
+      "email": "estu1@idat.com",
+      "password": "$2a$10$koB05440ZFH.DePfPqsj6OZiJVXfGUy03BUrrK8DDEpawiZCEfLH6",
+      "nombre": "Pedro López",
+      "roleId": 3,
+      "estado": "activo",
+      "imagen": "./profiles/profile-1.svg",
+      "id": 5
+    },
+    {
+      "email": "estu2@idat.com",
+      "password": "$2a$10$h9ovmk.HlmklIyTFQMDXX.8oqlqGIL2Yzm.0H19AGMInYscRmvR1S",
+      "nombre": "Lucía Ramírez",
+      "roleId": 3,
+      "estado": "activo",
+      "imagen": "./profiles/profile-3.svg",
+      "id": 6
+    },
+    {
+      "email": "estu3@idat.com",
+      "password": "$2a$10$H6Jjo6/Z0ucRvx/KqnDiO.HbejMMIbLm/tyzpZNkP69YEPX3a42Ze",
+      "nombre": "Carlos Núñez",
+      "roleId": 3,
+      "estado": "activo",
+      "imagen": "./profiles/profile-2.svg",
+      "id": 7
+    },
+    {
+      "email": "estu4@idat.com",
+      "password": "$2a$10$ZblNr/kwGuvPbqZffVqwH.8YJudRiazPhoQ/xZjGcBz1Z96lCV9dO",
+      "nombre": "Andrea Silva",
+      "roleId": 3,
+      "estado": "activo",
+      "imagen": "./profiles/profile-2.svg",
+      "id": 8
+    },
+    {
+      "email": "estu5@idat.com",
+      "password": "$2a$10$Pdr/AQ6C2YhP59Z/2FW/yOzH2f5AGu6rKXlFduNUAE8scFBZSjH.W",
+      "nombre": "Miguel Castro",
+      "roleId": 3,
+      "estado": "activo",
+      "imagen": "./profiles/profile-3.svg",
+      "id": 9
+    },
+    {
+      "email": "estu6@idat.com",
+      "password": "$2a$10$sGdHSrVMF.emKfbw8fNrHuwmBbACv6RlgHvUxEAJbeLmZHBTPlJbO",
+      "id": 10,
+      "nombre": "Valeria Campos",
+      "roleId": 3,
+      "estado": "activo",
+      "imagen": "./profiles/profile-3.svg"
+    },
+    {
+      "email": "sandra01@gmail.com",
+      "password": "$2a$10$.DRwoKsHRxhYW7cmLJNGpOtKKrg.HemGOm6OMW3prDo.vUb5CFKb2",
+      "nombre": "Sandra Quispe Rojas",
+      "roleId": 2,
+      "estado": "activo",
+      "imagen": "./profiles/profile-1.svg",
+      "id": 11
+    },
+    {
+      "email": "milagros@gmail.com",
+      "password": "$2a$10$0.Cil2D04RCDX3RSfQcb5.JtBxP5wi8iAlPkEsRE4/R3LD2pC3Xba",
+      "nombre": "Milagros Teresa Aguilar Ascue",
+      "roleId": 3,
+      "estado": "activo",
+      "imagen": "./profiles/profile-1.svg",
+      "id": 12
+    },
+    {
+      "email": "annelisa@idat.com",
+      "password": "$2a$10$vg6g55ig5lXIMeFZoaI6IOGvtTDM8Jv90wTNUpB2lRdMazcQeWRsq",
+      "nombre": "Annelisa Aliaga Lopez",
+      "roleId": 1,
+      "estado": "activo",
+      "imagen": "./profiles/profile-1.svg",
+      "id": 13
+    }
+  ],
+  "cursos": [
+    {
+      "nombre": "Angular Básico",
+      "descripcion": "Curso introductorio de Angular.",
+      "fechaInicio": "2024-08-01",
+      "profesorId": 11,
+      "estado": "activo",
+      "id": 1,
+      "horarios": [
+        {
+          "dia": "Miercoles",
+          "horaInicio": "10:00",
+          "horaFin": "12:00"
+        },
+        {
+          "dia": "Jueves",
+          "horaInicio": "10:00",
+          "horaFin": "12:00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Backend con Node.js",
+      "descripcion": "Crea APIs REST con Node.js.",
+      "profesorId": 2,
+      "imagen": "cursos/curso2.webp",
+      "estado": "activo",
+      "fechaInicio": "2024-08-01",
+      "horarios": [
+        {
+          "dia": "Martes",
+          "horaInicio": "10:00",
+          "horaFin": "12:00"
+        },
+        {
+          "dia": "Viernes",
+          "horaInicio": "10:00",
+          "horaFin": "12:00"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Java Fundamentos",
+      "descripcion": "Conceptos esenciales de Java.",
+      "profesorId": 3,
+      "imagen": "cursos/curso3.webp",
+      "estado": "activo",
+      "fechaInicio": "2024-08-15",
+      "horarios": [
+        {
+          "dia": "Lunes",
+          "horaInicio": "14:00",
+          "horaFin": "16:00"
+        },
+        {
+          "dia": "Miércoles",
+          "horaInicio": "14:00",
+          "horaFin": "16:00"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Diseño UX/UI",
+      "descripcion": "Principios de diseño de interfaces.",
+      "profesorId": 4,
+      "imagen": "cursos/curso4.webp",
+      "estado": "activo",
+      "fechaInicio": "2024-08-15",
+      "horarios": [
+        {
+          "dia": "Martes",
+          "horaInicio": "08:00",
+          "horaFin": "10:00"
+        },
+        {
+          "dia": "Jueves",
+          "horaInicio": "08:00",
+          "horaFin": "10:00"
+        }
+      ]
+    },
+    {
+      "nombre": "seminario",
+      "descripcion": "curso asincronico",
+      "fechaInicio": "2025-12-26",
+      "profesorId": 11,
+      "imagen": "./cursos/cisco.png",
+      "estado": "activo",
+      "horarios": [
+        {
+          "dia": "Martes",
+          "horaInicio": "10:00",
+          "horaFin": "12:00"
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "matriculas": [
+    {
+      "id": 1,
+      "cursoId": 1,
+      "usuarioId": 5
+    },
+    {
+      "id": 2,
+      "cursoId": 1,
+      "usuarioId": 6
+    },
+    {
+      "id": 3,
+      "cursoId": 1,
+      "usuarioId": 7
+    },
+    {
+      "id": 4,
+      "cursoId": 2,
+      "usuarioId": 5
+    },
+    {
+      "id": 5,
+      "cursoId": 2,
+      "usuarioId": 8
+    },
+    {
+      "id": 7,
+      "cursoId": 3,
+      "usuarioId": 6
+    },
+    {
+      "id": 8,
+      "cursoId": 3,
+      "usuarioId": 7
+    },
+    {
+      "id": 9,
+      "cursoId": 3,
+      "usuarioId": 10
+    },
+    {
+      "id": 10,
+      "cursoId": 4,
+      "usuarioId": 8
+    },
+    {
+      "id": 11,
+      "cursoId": 4,
+      "usuarioId": 9
+    },
+    {
+      "id": 12,
+      "cursoId": 4,
+      "usuarioId": 10
+    },
+    {
+      "usuarioId": 9,
+      "cursoId": 4,
+      "id": 13
+    },
+    {
+      "usuarioId": 5,
+      "cursoId": 5,
+      "id": 14
+    },
+    {
+      "usuarioId": 7,
+      "cursoId": 2,
+      "id": 15
+    },
+    {
+      "usuarioId": 9,
+      "cursoId": 2,
+      "id": 16
+    }
+  ],
+  "contenidoCursos": [
+    {
+      "id": 1,
+      "cursoId": 1,
+      "tipo": "pdf",
+      "titulo": "Introducción Angular",
+      "url": "contenido/intro-angular.pdf"
+    },
+    {
+      "id": 2,
+      "cursoId": 1,
+      "tipo": "video",
+      "titulo": "Componentes Angular",
+      "url": "contenido/video-comp.mp4"
+    },
+    {
+      "id": 3,
+      "cursoId": 1,
+      "tipo": "tarea",
+      "titulo": "Tarea 1 Angular",
+      "fechaEntrega": "2025-01-20"
+    },
+    {
+      "id": 4,
+      "cursoId": 2,
+      "tipo": "pdf",
+      "titulo": "API REST Node",
+      "url": "contenido/api-rest.pdf"
+    },
+    {
+      "id": 5,
+      "cursoId": 2,
+      "tipo": "tarea",
+      "titulo": "Tarea Node - CRUD",
+      "fechaEntrega": "2025-01-18"
+    },
+    {
+      "id": 6,
+      "cursoId": 3,
+      "tipo": "pdf",
+      "titulo": "Variables y Tipos",
+      "url": "contenido/java-basico.pdf"
+    },
+    {
+      "id": 7,
+      "cursoId": 3,
+      "tipo": "video",
+      "titulo": "POO en Java",
+      "url": "contenido/poo.mp4"
+    },
+    {
+      "id": 8,
+      "cursoId": 4,
+      "tipo": "pdf",
+      "titulo": "Principios UX",
+      "url": "contenido/ux-principios.pdf"
+    },
+    {
+      "id": 9,
+      "cursoId": 4,
+      "tipo": "tarea",
+      "titulo": "Tarea Wireframes",
+      "fechaEntrega": "2025-01-25"
+    },
+    {
+      "id": 10,
+      "cursoId": 4,
+      "tipo": "video",
+      "titulo": "Diseño UI",
+      "url": "contenido/ui-video.mp4"
+    }
+  ],
+  "asistencias": [
+    {
+      "id": 1,
+      "cursoId": 1,
+      "usuarioId": 5,
+      "fecha": "2025-01-10",
+      "estado": "asistió"
+    },
+    {
+      "id": 2,
+      "cursoId": 1,
+      "usuarioId": 6,
+      "fecha": "2025-01-10",
+      "estado": "faltó"
+    },
+    {
+      "id": 3,
+      "cursoId": 1,
+      "usuarioId": 7,
+      "fecha": "2025-01-10",
+      "estado": "asistió"
+    }
+  ],
+  "tareas": [
+    {
+      "id": 1,
+      "cursoId": 1,
+      "usuarioId": 5,
+      "titulo": "Tarea 1 Angular",
+      "archivo": "tareas/ang-alumno1.pdf",
+      "fechaEntrega": "2025-01-20"
+    }
+  ]
+}

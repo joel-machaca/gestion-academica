@@ -1,0 +1,18 @@
+
+@container (max-width: 900px) {
+    .table-column-desc {
+        display: none;
+    }
+}
+
+@container (max-width: 768px) {
+    .table-column-code {
+        display: none;
+    }
+}
+
+@container (max-width: 640px) {
+    .table-column-students {
+        display: none;
+    }
+}

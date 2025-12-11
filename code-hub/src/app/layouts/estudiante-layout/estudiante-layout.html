@@ -1,0 +1,21 @@
+<div class="h-screen flex bg-gray-100">
+    <app-aside >
+        <app-button-aside ruta="/" text="Perfil" class=" hover:text-red-700">
+            <app-icon-usuario />
+        </app-button-aside>
+
+        <app-button-aside ruta="/" text="Cursos" class=" hover:text-red-700">
+            <app-icon-libro/>
+        </app-button-aside>
+    </app-aside>
+
+
+    <div class="flex-1 flex flex-col">
+        <app-header/>
+
+
+        <main class="flex-1 overflow-auto p-6">
+            <router-outlet/>
+        </main>
+    </div>
+</div>

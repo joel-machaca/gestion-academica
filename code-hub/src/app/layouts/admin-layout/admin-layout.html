@@ -1,0 +1,28 @@
+<div class="h-screen flex bg-gray-100">
+    <app-aside>
+        <app-button-aside ruta="/admin" text="Usuarios"  class=" hover:text-red-700">
+            <app-icon-usuario />
+        </app-button-aside>
+
+        <app-button-aside ruta="/admin/cursos" text="Cursos"  class=" hover:text-red-700">
+            <app-icon-libro/>
+        </app-button-aside>
+
+        <app-button-aside ruta="/admin/reportes" text="Reportes" class=" hover:text-red-700">
+            <app-icon-barra/>
+        </app-button-aside>
+        <app-button-aside ruta="/admin/matriculas" text="Matriculas" class=" hover:text-red-700">
+            <app-icon-matricula/>
+        </app-button-aside>
+    </app-aside>
+
+    <div class="flex-1 flex flex-col">
+
+        <app-header/>
+
+
+        <main class="flex-1 overflow-auto p-6">
+            <router-outlet/>
+        </main>
+    </div>
+</div>

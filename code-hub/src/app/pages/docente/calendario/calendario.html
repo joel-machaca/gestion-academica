@@ -1,0 +1,62 @@
+<main class="flex-1 p-8">
+  <!-- Page Heading -->
+  <div class="flex flex-wrap justify-between gap-4 items-center mb-6">
+    <h1 class="text-primary text-4xl font-black leading-tight tracking-[-0.033em]">Calendario de Clases</h1>
+    <div class="flex items-center gap-2">
+      <!-- SegmentedButtons -->
+      <div class="flex h-10 items-center justify-center rounded-lg bg-gray-200/80 dark:bg-gray-800 p-1">
+        <label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded px-4 has-checked:bg-white has-checked:shadow-sm has-checked:text-gray-900 text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-colors">
+          <span class="truncate">Día</span>
+          <input class="invisible w-0" name="calendar-view" type="radio" value="Día" />
+        </label>
+        <label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded px-4 has-checked:bg-white has-checked:shadow-sm has-checked:text-gray-900 text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-colors">
+          <span class="truncate">Semana</span>
+          <input checked class="invisible w-0" name="calendar-view" type="radio" value="Semana" />
+        </label>
+        <label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded px-4 has-checked:bg-white has-checked:shadow-sm has-checked:text-gray-900 text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal transition-colors">
+          <span class="truncate">Mes</span>
+          <input class="invisible w-0" name="calendar-view" type="radio" value="Mes" />
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendar Section -->
+  <div class="bg-white dark:bg-black/20 rounded-xl shadow-sm p-6">
+    <!-- Toolbar -->
+    <div class="flex justify-between gap-2 items-center mb-4">
+      <div class="flex items-center gap-4">
+        <div class="flex gap-2">
+          <button class="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button class="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">Octubre 21 - 27, 2024</h3>
+      </div>
+      <button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-primary text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-4 hover:bg-red-700 transition-colors">
+        <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">download</span>
+        <span class="truncate">Exportar Horario</span>
+      </button>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-7 border-t border-l border-gray-200 dark:border-gray-700">
+      <!-- Day Headers -->
+      <div *ngFor="let dia of diasSemana" class="text-center py-2 border-r border-b border-gray-200 dark:border-gray-700">
+        <span class="text-gray-600 dark:text-gray-400 font-semibold text-sm">{{dia}}</span>
+      </div>
+
+      <!-- Calendar Cells -->
+      <div *ngFor="let dia of diasSemana" class="min-h-48 border-r border-b border-gray-200 dark:border-gray-700 p-2">
+        <div *ngFor="let horario of getHorariosPorDia(dia)" class="bg-red-700/20 dark:bg-red-700/20 p-2 rounded-lg mb-2">
+          <p class="font-bold text-sm text-primary dark:text-primary-light">{{ horario.cursoNombre }}</p>
+          <p class="text-xs text-gray-700 dark:text-gray-300 mt-1">{{ horario.horaInicio }} - {{ horario.horaFin }}</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">{{ horario.dia }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,140 @@
+<main class="flex-1 p-8">
+  <div class="w-full max-w-4xl mx-auto">
+    <!-- PageHeading -->
+    <div class="mb-8">
+      <h1 class="text-red-700 text-4xl font-black leading-tight tracking-tight">Crear Nuevo Curso</h1>
+      <p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal mt-2">
+        Complete el siguiente formulario para registrar un nuevo curso en la plataforma.
+      </p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="bg-white dark:bg-background-dark rounded-xl shadow-sm p-8">
+      <form [formGroup]="formCurso" (ngSubmit)="handleSubmit()" class="space-y-6">
+
+        <!-- Nombre del Curso -->
+        <div class="flex flex-col">
+          <label for="course-name" class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">
+            Nombre del Curso
+          </label>
+          <input formControlName="nombre" id="course-name" type="text" placeholder="Ej: Fundamentos de Programación"
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-red-700/50 border border-gray-400/50 dark:border-gray-600 bg-white dark:bg-background-dark/80 focus:border-red-700 h-12 placeholder:text-gray-600/70 dark:placeholder:text-gray-400/70 px-4 text-base font-normal leading-normal py-3">
+        </div>
+
+        <!-- Descripción del Curso -->
+        <div class="flex flex-col">
+          <label for="course-description"
+            class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">
+            Descripción del Curso
+          </label>
+          <textarea formControlName="descripcion" id="course-description"
+            placeholder="Ingrese una descripción detallada sobre el contenido y los objetivos del curso."
+            class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-red-700/50 border border-gray-400/50 dark:border-gray-600 bg-white dark:bg-background-dark/80 focus:border-red-700 min-h-36 placeholder:text-gray-600/70 dark:placeholder:text-gray-400/70 p-4 text-base font-normal leading-normal">
+          </textarea>
+        </div>
+
+        <!-- Fecha de Inicio y Profesor -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Fecha de Inicio -->
+          <div class="flex flex-col">
+            <label for="start-date" class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">
+              Fecha de Inicio
+            </label>
+            <div class="relative flex w-full items-center">
+              <input formControlName="fechaInicio" id="start-date" type="date" placeholder="Seleccione una fecha"
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-red-700/50 border border-gray-400/50 dark:border-gray-600 bg-white dark:bg-background-dark/80 focus:border-red-700 h-12 placeholder:text-gray-600/70 dark:placeholder:text-gray-400/70 pl-4 pr-10 text-base font-normal leading-normal">
+              <div class="absolute right-3 text-gray-600 dark:text-gray-400 pointer-events-none">
+                <span class="material-symbols-outlined">calendar_today</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profesor Asignado -->
+          <div class="flex flex-col">
+            <label for="teacher" class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">
+              Profesor Asignado
+            </label>
+            <div class="relative flex w-full items-center">
+              <select formControlName="profesorId" id="teacher"
+                class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-red-700/50 border border-gray-400/50 dark:border-gray-600 bg-white dark:bg-background-dark/80 focus:border-red-700 h-12 px-4 text-base font-normal leading-normal">
+                <option value="">Seleccione un profesor</option>
+                @for (prof of profesores; track prof.id) {
+                <option [value]="prof.id">{{ prof.nombre }}</option>
+                }
+              </select>
+              <div class="absolute right-3 text-gray-600 dark:text-gray-400 pointer-events-none">
+                <span class="material-symbols-outlined">expand_more</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen del Curso -->
+        <div class="flex flex-col">
+          <label class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">Imagen del
+            Curso</label>
+          <div class="flex flex-col items-center w-full">
+            <label
+              class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-400/50 rounded-lg cursor-pointer bg-gray-200/50 hover:bg-gray-200"
+              for="dropzone-file">
+              <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                <span class="material-symbols-outlined text-gray-600">cloud_upload</span>
+                <p class="mb-2 text-sm text-gray-600">
+                  <span class="font-semibold">Click para cargar</span> o arrastrar y soltar
+                </p>
+              </div>
+              <input class="hidden" id="dropzone-file" type="file" (change)="seleccionarImagen($event)"
+                accept=".png,.jpg,.jpeg,.gif" />
+            </label>
+            @if (previewImagen) {
+            <img [src]="previewImagen" class="mt-2 w-64 h-32 object-cover rounded-lg" />
+            }
+          </div>
+        </div>
+
+        <!-- Estado -->
+        <div class="flex flex-col">
+          <label for="status" class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">
+            Estado
+          </label>
+          <div class="relative flex w-full items-center">
+            <select formControlName="estado" id="status"
+              class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-red-700/50 border border-gray-400/50 dark:border-gray-600 bg-white dark:bg-background-dark/80 focus:border-red-700 h-12 px-4 text-base font-normal leading-normal">
+              <option value="draft">Seleccione estado</option>
+              <option value="activo">Activo</option>
+              <option value="inactivo">Inactivo</option>
+            </select>
+            <div class="absolute right-3 text-gray-600 dark:text-gray-400 pointer-events-none">
+              <span class="material-symbols-outlined">expand_more</span>
+            </div>
+          </div>
+        </div>
+
+<!-- Horario -->
+<div class="flex flex-col">
+  <label for="horario" class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2">
+    Horario
+  </label>
+  <select formControlName="horarioId" id="horario"
+    class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-red-700/50 border border-gray-400/50 dark:border-gray-600 bg-white dark:bg-background-dark/80 focus:border-red-700 py-2 px-4 text-base font-normal leading-normal">
+    <option value="">Seleccione un horario</option>
+    <option *ngFor="let h of horariosDisponibles" [value]="h.id">{{ h.label }}</option>
+  </select>
+</div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-end gap-4 pt-4">
+          <button type="button"
+            class="px-6 py-2.5 rounded-lg text-gray-800 dark:text-gray-200 bg-gray-400/20 dark:bg-gray-600/50 hover:bg-gray-400/40 dark:hover:bg-gray-600/70 font-medium text-sm">
+            Cancelar
+          </button>
+          <button type="submit"
+            class="px-6 py-2.5 rounded-lg text-white bg-red-700 hover:bg-red-700 font-medium text-sm">
+            Crear Curso
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>

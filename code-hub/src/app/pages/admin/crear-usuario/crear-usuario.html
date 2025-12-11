@@ -1,0 +1,115 @@
+<main class="flex-1 p-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- Breadcrumbs -->
+        <div class="flex flex-wrap gap-2 mb-6">
+            <a class="text-[#87646a] dark:text-gray-400 text-sm font-medium leading-normal" href="#">Dashboard</a>
+            <span class="text-[#87646a] dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+            <a class="text-[#87646a] dark:text-gray-400 text-sm font-medium leading-normal" href="#">Usuarios</a>
+            <span class="text-[#87646a] dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+            <span class="text-[#171112] dark:text-white text-sm font-medium leading-normal">Crear Usuario</span>
+        </div>
+        <!-- PageHeading -->
+        <div class="flex flex-wrap justify-between gap-3 mb-8">
+            <div class="flex min-w-72 flex-col gap-2">
+                <p class="text-red-700 text-4xl font-black leading-tight tracking-[-0.033em]">Crear Nuevo Usuario</p>
+                <p class="text-[#87646a] dark:text-gray-400 text-base font-normal leading-normal">Complete el formulario
+                    para registrar un nuevo usuario en el sistema.</p>
+            </div>
+        </div>
+        <!-- Form Container -->
+        <div
+            class="bg-white dark:bg-background-dark border border-[#e5dcdd] dark:border-white/10 rounded-xl shadow-sm p-8">
+            <form [formGroup]="formUsuario" (ngSubmit)="crearUsuario()" class="flex flex-col gap-8">
+                <!-- Personal Information Section -->
+                <div class="flex flex-col gap-6">
+                    <h2 class="text-xl font-bold text-[#171112] dark:text-white">Información Personal</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <label class="flex flex-col">
+                            <p class="text-[#171112] dark:text-white text-base font-medium leading-normal pb-2">
+                                Nombre(s)</p>
+                            <input
+                                formControlName="nombre"
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#171112] dark:text-white focus:outline-0 border border-[#e5dcdd] dark:border-white/20 bg-white dark:bg-gray-800/20 focus:border-red-700 h-14 placeholder:text-[#87646a] p-[15px] text-base font-normal leading-normal focus:ring-2 focus:ring-red-700/20"
+                                placeholder="Ingrese el nombre" value="" />
+                        </label>
+                        <label class="flex flex-col">
+                            <p class="text-[#171112] dark:text-white text-base font-medium leading-normal pb-2">
+                                Apellido(s)</p>
+                            <input
+                                formControlName="apellido"
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#171112] dark:text-white focus:outline-0 border border-[#e5dcdd] dark:border-white/20 bg-white dark:bg-gray-800/20 focus:border-red-700 h-14 placeholder:text-[#87646a] p-[15px] text-base font-normal leading-normal focus:ring-2 focus:ring-red-700/20"
+                                placeholder="Ingrese los apellidos" value="" />
+                        </label>
+                    </div>
+                    <label class="flex flex-col">
+                        <p class="text-[#171112] dark:text-white text-base font-medium leading-normal pb-2">Correo
+                            Electrónico</p>
+                        <div class="relative flex w-full flex-1 items-center">
+                            <span class="material-symbols-outlined text-[#87646a] absolute left-4">mail</span>
+                            <input
+                                formControlName="email"
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#171112] dark:text-white focus:outline-0 border border-[#e5dcdd] dark:border-white/20 bg-white dark:bg-gray-800/20 focus:border-red-700 h-14 placeholder:text-[#87646a] px-[15px] pl-12 text-base font-normal leading-normal focus:ring-2 focus:ring-red-700/20"
+                                placeholder="usuario@ejemplo.com" type="email" value="" />
+                        </div>
+                    </label>
+                </div>
+                <!-- Credentials and Roles Section -->
+                <div class="flex flex-col gap-6">
+                    <h2 class="text-xl font-bold text-[#171112] dark:text-white">Credenciales y Roles</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <label class="flex flex-col">
+                            <p class="text-[#171112] dark:text-white text-base font-medium leading-normal pb-2">
+                                Contraseña</p>
+                            <div class="relative flex w-full flex-1 items-center">
+                                <span class="material-symbols-outlined text-[#87646a] absolute left-4">lock</span>
+                                <input
+                                formControlName="password"
+                                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#171112] dark:text-white focus:outline-0 border border-[#e5dcdd] dark:border-white/20 bg-white dark:bg-gray-800/20 focus:border-red-700 h-14 placeholder:text-[#87646a] px-[15px] pl-12 text-base font-normal leading-normal focus:ring-2 focus:ring-red-700/20"
+                                    placeholder="Ingrese una contraseña" type="password" />
+                            </div>
+                        </label>
+                        <label class="flex flex-col">
+                            <p class="text-[#171112] dark:text-white text-base font-medium leading-normal pb-2">
+                                Confirmar Contraseña</p>
+                            <div class="relative flex w-full flex-1 items-center">
+                                <span class="material-symbols-outlined text-[#87646a] absolute left-4">lock</span>
+                                <input
+                                    formControlName="confirmarPassword"
+                                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#171112] dark:text-white focus:outline-0 border border-[#e5dcdd] dark:border-white/20 bg-white dark:bg-gray-800/20 focus:border-red-700 h-14 placeholder:text-[#87646a] px-[15px] pl-12 text-base font-normal leading-normal focus:ring-2 focus:ring-red-700/20"
+                                    placeholder="Confirme la contraseña" type="password" />
+                            </div>
+                        </label>
+                    </div>
+                    <label class="flex flex-col">
+                        <p class="text-[#171112] dark:text-white text-base font-medium leading-normal pb-2">Rol de
+                            Usuario</p>
+                        <div class="relative flex w-full flex-1 items-center">
+                            <span class="material-symbols-outlined text-[#87646a] absolute left-4">person</span>
+                            <select
+                                formControlName="roleId"
+                                class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#171112] dark:text-white focus:outline-0 border border-[#e5dcdd] dark:border-white/20 bg-white dark:bg-gray-800/20 focus:border-red-700 h-14 placeholder:text-[#87646a] px-[15px] pl-12 text-base font-normal leading-normal appearance-none focus:ring-2 focus:ring-red-700/20">
+                                <option value="3">Estudiante</option>
+                                <option value="2">Profesor</option>
+                                <option value="1">Administrador</option>
+                            </select>
+                            <span
+                                class="material-symbols-outlined text-[#87646a] absolute right-4 pointer-events-none">expand_more</span>
+                        </div>
+                    </label>
+                </div>
+                <!-- Actions Section -->
+                <div
+                    class="flex justify-end items-center gap-4 pt-4 border-t border-[#e5dcdd] dark:border-white/10 mt-2">
+                    <button
+                        class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-gray-100 dark:bg-gray-700 text-[#171112] dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-200 dark:hover:bg-gray-600">
+                        <span class="truncate">Cancelar</span>
+                    </button>
+                    <button
+                        class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-red-700 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-red-700/90">
+                        <span class="truncate">Crear Usuario</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

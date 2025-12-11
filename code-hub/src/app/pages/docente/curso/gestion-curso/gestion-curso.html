@@ -1,0 +1,63 @@
+<main class="flex-1 p-6 lg:p-10">
+  <!-- PageHeading -->
+  <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+    <h1 class="text-red-700 text-4xl font-black leading-tight tracking-[-0.033em]">Mis Cursos</h1>
+    <button
+      class="bg-red-700 text-white text-sm font-medium py-2 px-4 rounded-lg flex items-center gap-2 hover:bg-red-700 dark:hover:bg-red-600 transition-colors">
+      <span class="material-symbols-outlined text-base">add_circle</span>
+      <span>Crear Nuevo Curso</span>
+    </button>
+  </div>
+
+  <!-- Table -->
+  <div class="overflow-x-auto @container">
+    <div class="min-w-full inline-block align-middle">
+      <div
+        class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+        <table class="min-w-full divide-y divide-slate-200 dark:divide-slate-800">
+          <thead class="bg-slate-50 dark:bg-slate-800/50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Nombre del Curso</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Código</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Descripción</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Alumnos</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+            <tr *ngFor="let curso of cursos">
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[#171112] dark:text-slate-200">
+                {{ curso.nombre }}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 dark:text-slate-400">
+                {{ curso.id }}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 dark:text-slate-400">
+                {{ curso.descripcion }}
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 dark:text-slate-400">
+                {{ curso.alumnos || 0 }} Alumnos
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
+                <button class="p-2 text-slate-600 dark:text-slate-400 hover:text-red-700 dark:hover:text-red-700 rounded-lg hover:bg-red-700/10 dark:hover:bg-red-700/20">
+                  <span class="material-symbols-outlined text-base">edit</span>
+                </button>
+                <button class="p-2 text-slate-600 dark:text-slate-400 hover:text-red-700 dark:hover:text-red-700 rounded-lg hover:bg-red-700/10 dark:hover:bg-red-700/20">
+                  <span class="material-symbols-outlined text-base">folder_managed</span>
+                </button>
+                <button class="p-2 text-slate-600 dark:text-slate-400 hover:text-red-700 dark:hover:text-red-700 rounded-lg hover:bg-red-700/10 dark:hover:bg-red-700/20">
+                  <span class="material-symbols-outlined text-base">group</span>
+                </button>
+                <button class="p-2 text-slate-600 dark:text-slate-400 hover:text-red-700 dark:hover:text-red-700 rounded-lg hover:bg-red-700/10 dark:hover:bg-red-700/20">
+                  <span class="material-symbols-outlined text-base">quiz</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,39 @@
+<main class="flex-1 p-6 md:p-10">
+  <div class="layout-content-container flex flex-col w-full max-w-7xl mx-auto">
+    <div class="flex flex-wrap justify-between gap-3 pb-6">
+      <p class="text-[#1A1A1A] dark:text-gray-100 text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">
+        Student Dashboard
+      </p>
+    </div>
+
+    <h2 class="text-[#1A1A1A] dark:text-gray-200 text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">
+      My Courses
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div *ngFor="let curso of cursosAlumno"
+           class="flex flex-col justify-between gap-4 p-4 bg-white dark:bg-gray-800 border border-[#C4C4C4] dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex flex-col gap-2">
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-md"
+               [style.background-image]="'url(' + curso.imagen + ')'">
+          </div>
+          <div>
+            <p class="text-[#1A1A1A] dark:text-gray-100 text-base font-medium leading-normal">{{ curso.nombre }}</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
+              {{ curso.codigo }} - Prof. {{ curso.profesor }}
+            </p>
+          </div>
+        </div>
+<div class="flex flex-col gap-2">
+  <div class="w-full bg-gray-300 dark:bg-gray-600 rounded-full h-2 overflow-hidden">
+    <div class="h-2 rounded-full transition-all duration-500 bg-red-700" style="width: 90%"></div>
+  </div>
+  <p class="text-right text-sm text-gray-600 dark:text-gray-300">90% Complete</p>
+  <button class="w-full py-2 px-4 bg-red-700 text-white text-sm font-semibold rounded-md hover:bg-red-600 transition-colors">
+    View Course
+  </button>
+</div>
+      </div>
+    </div>
+  </div>
+</main>

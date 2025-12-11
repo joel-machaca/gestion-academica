@@ -1,0 +1,12 @@
+<aside [ngClass]="isOpen?'w-64':'w-15'" class="h-screen duration-200 bg-neutral-900 text-white flex flex-col relative">
+    <div class="flex min-h-[100px] duration-200" [ngClass]="isOpen? 'pl-5':'pl-2'">
+        <img src="/logo.svg" alt="logo de coderhub" class="w-10 duration-200 " [ngClass]="{'rotate-360': !isOpen}"/>
+        <img src="/logo-text.svg" alt="logo de coderhub" class="w-40 duration-200" [ngClass]="isOpen? 'ml-4' :'scale-0'"/>
+    </div>
+    <nav class="flex-1 p-2 overflow-auto">
+        <ng-content/>
+    </nav>
+    <div class="absolute right-5 bottom-5 overflow-hidden" [ngClass]="isOpen? 'rotate-0':'rotate-180'">
+        <app-icon-flecha className="text-2xl text-gray-500 hover:text-gray-400 cursor-pointer duration-75 origin-center "  (click)="handleClick()"/>
+    </div>
+</aside>

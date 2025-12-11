@@ -1,0 +1,64 @@
+<main class="flex-1 p-6 lg:p-10">
+  <div class="mx-auto max-w-7xl">
+    <!-- Heading -->
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Gestión de Matrículas</h1>
+      <button (click)="abrirModal()" class="px-4 py-2 bg-red-700 text-white rounded hover:bg-red-600">
+        + Matricular
+      </button>
+    </div>
+
+    <!-- Tabla de matriculas -->
+    <div class="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+      <table class="w-full text-left">
+        <thead class="bg-gray-50 dark:bg-gray-800">
+          <tr>
+            <th class="px-6 py-3 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Alumno</th>
+            <th class="px-6 py-3 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Curso</th>
+            <th class="px-6 py-3 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+          <tr *ngFor="let m of matriculas" class="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+            <td class="px-6 py-4 text-sm text-gray-900 dark:text-white">{{ getNombreAlumno(m.usuarioId) }}</td>
+            <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">{{ getNombreCurso(m.cursoId) }}</td>
+            <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">
+              <button (click)="eliminarMatricula(m.id!)" class="text-red-600 hover:text-red-800">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<!-- Modal -->
+<div *ngIf="mostrarModal" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+  <div class="bg-white dark:bg-gray-800 rounded-lg w-96 p-6">
+    <h2 class="text-xl font-bold mb-4">Matricular Alumno</h2>
+    <form [formGroup]="formMatricula" (ngSubmit)="matricular()" class="space-y-4">
+      <div>
+        <label class="block mb-1 font-medium text-gray-700 dark:text-gray-200">Curso</label>
+        <select formControlName="cursoId" class="w-full p-2 border rounded">
+          <option value="" disabled selected>Selecciona un curso</option>
+          <option *ngFor="let c of cursos" [value]="c.id">{{ c.nombre }}</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block mb-1 font-medium text-gray-700 dark:text-gray-200">Alumno</label>
+        <select formControlName="alumnoId" class="w-full p-2 border rounded">
+          <option value="" disabled selected>Selecciona un alumno</option>
+          <option *ngFor="let a of alumnosDisponibles()" [value]="a.id">{{ a.nombre }}</option>
+        </select>
+      </div>
+
+      <div class="flex justify-end gap-2 mt-4">
+        <button type="button" (click)="cerrarModal()" class="px-4 py-2 rounded bg-gray-300">Cancelar</button>
+        <button type="submit" class="px-4 py-2 rounded bg-red-700 text-white">Matricular</button>
+      </div>
+    </form>
+  </div>
+</div>
